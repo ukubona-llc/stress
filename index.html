@@ -462,6 +462,8 @@
           <a href="#p6"><b>E</b><span>Escaping Mimicry</span></a>
           <a href="#p7"><b>A</b><span>Agon</span></a>
           <a href="#p8"><b>S</b><span>Science</span></a>
+          <a href="#p9"><b>D</b><span>Donor Followup</span></a>
+          <a href="#p10"><b>U</b><span>Unity</span></a>
           <p class="wg">Reference</p>
           <a href="#ref"><b>R</b><span>Hermeneutics</span></a>
         </nav>
@@ -1622,6 +1624,156 @@ V. Graveyard, Survivors, Culture {Stank-Face, Embodiment}, Memory, Institutions 
     </div>
     <p class="note">Append-only. Previous sections (including Agon) are left untouched. This tab only supplies the missing science cut that the user’s question required.</p>
   </section>
+
+  <section id="p9" class="sec">
+    <h2><span class="num">D</span>Donor Followup</h2>
+    <p class="lede">Append-only. Twenty years at Johns Hopkins on living kidney donation outcomes (mortality, ESRD, CKD, eGFR trajectory). The clinical claim: post-donation eGFR without uACR is too wild and noisy for meaningful ongoing vigilance. The only vigilance worth running is low-cost, adaptive, trajectory-based following that intensifies only when the personalized path approaches a cliff. This is transcending calendar science for something closer to life.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The clinical stance</h3>
+    <div class="body">
+      <p>After two decades focused on perioperative and long-term outcomes following living kidney donation, the view is that single-snapshot serum-creatinine eGFR in a healthy single-kidney donor is a high-variance proxy. Without concurrent urinary albumin/creatinine ratio, the number floats without a constraint that would distinguish true glomerular injury from benign functional adaptation, hydration, protein intake, muscle mass, diurnal rhythm, or assay variance. Isolated dips (e.g. 72 → 58) routinely trigger anxiety cascades, referrals, and redundant labs that do not improve detection of the endpoints that matter: progressive CKD, ESRD, mortality.</p>
+      <p>Population protocols optimize for trial endpoints, regulatory comfort, and liability. Individual ecology optimizes for a living person who is otherwise well. Those two objective functions diverge.</p>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Adaptive vigilance (control architecture)</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Mode</th><th>What it does</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="rn">1</td>
+            <td data-label="Mode"><strong>Low-cost baseline radar</strong></td>
+            <td data-label="What it does">Sparse, frictionless observation of the individual’s own eGFR trajectory (and, when available, related vectors). Life continues; the system watches the slope and the envelope, not every point.</td>
+            <td data-label="When">Steady state — the default for a well donor.</td>
+          </tr>
+          <tr>
+            <td class="rn">2</td>
+            <td data-label="Mode"><strong>Trajectory over snapshots</strong></td>
+            <td data-label="What it does">The single value is almost never the decision. The derivative (slope, acceleration, deviation from the person’s expected age-related glide) is the signal.</td>
+            <td data-label="When">Always. Snapshots are inputs to the trajectory model, not triggers by themselves.</td>
+          </tr>
+          <tr>
+            <td class="rn">3</td>
+            <td data-label="Mode"><strong>Triggered escalation (“cliff” warning)</strong></td>
+            <td data-label="What it does">When the personalized path approaches a risk threshold or leaves its expected envelope, tighten the sampling mesh: raise frequency (e.g. 6-monthly → monthly) and layer refiners (HbA1c, home/ambulatory SBP, additional biochemistry).</td>
+            <td data-label="When">Only when the trajectory itself signals proximity to a selective boundary.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">This is control theory applied to one human life: default sparse sensing of the Engine’s slow dynamics; increase sensing quality and rate only when the residual risk changes. It is not less science. It is a different sampling policy.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Gemini’s read (captured)</h3>
+    <div class="body">
+      <p>Gemini identified the same tension: population-level epidemiological vigilance (calendar-driven, liability-shaped) versus individual-level human ecology (designed for flourishing without continuous medicalization). It correctly listed the physiological noise sources in single-kidney eGFR, the panic of the isolated dip, and the missing uACR constraint. Its “adaptive vigilance” sketch — low-cost baseline radar, trajectory over snapshots, triggered escalation — is a fair translation of the clinical stance. It also noted that the approach respects autonomy and psychological bandwidth while keeping a mathematically coherent safety net.</p>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Grok’s read</h3>
+    <div class="body">
+      <p>The stronger claim is where the signal lives. Post-donation eGFR without albuminuria is under-determined for ongoing vigilance. Treating every fluctuation as actionable produces medicalization without proportional gain in early detection of the outcomes studied for two decades. The proposal therefore stays at a low-cost Perception / Sample layer most of the time and escalates the quality and frequency of sampling of the Engine only when the trajectory approaches a selective boundary (the cliff). That is closer to life because it does not continuously treat the person as a problem to be solved; it treats them as a resilient system whose residual risk is monitored with minimal friction until the residual risk itself changes.</p>
+      <p>In canopy language: science (calendar protocols, high-frequency eGFR) sits at Perception / Sample. Embodiment and the V → I′ return are the brother’s actual life. Adaptive following keeps the expensive layer in reserve until the Engine’s own dynamics demand it.</p>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Digital twin as the technical expression</h3>
+    <p class="note">A personalized, low-cost trajectory model that updates on sparse measurements and only tightens the mesh when the predicted path nears a threshold is the natural architecture for this stance. Curious readers can inspect the broader frame at:</p>
+    <p class="note"><a href="https://j-digital-twin.onrender.com/" target="_blank" rel="noopener">https://j-digital-twin.onrender.com/</a></p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Open for later</h3>
+    <p class="note">The super-cheap tech stack for capturing and smoothing the eGFR series, defining the individual’s own expected envelope, and raising sampling density without friction is available for discussion when wanted. It is the operational layer of the same claim: low-cost following is the default; science intensifies only at the cliff.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Falsifiers</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Claim</th><th>What would falsify it</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="Claim">Post-donation eGFR without uACR is too noisy for meaningful calendar-based vigilance</td><td data-label="What would falsify it">Evidence that isolated eGFR dips, in the absence of albuminuria or other injury markers, reliably predict the hard endpoints (ESRD, progressive CKD, mortality) at a rate that justifies continuous high-frequency protocols.</td></tr>
+          <tr><td class="rn">2</td><td data-label="Claim">Trajectory / slope / personalized envelope is the actionable signal</td><td data-label="What would falsify it">Demonstration that single snapshots outperform trajectory models for early detection in healthy single-kidney donors.</td></tr>
+          <tr><td class="rn">3</td><td data-label="Claim">Low-cost adaptive following preserves safety while reducing medicalization</td><td data-label="What would falsify it">Outcome data showing that sparse baseline + triggered escalation misses preventable events that rigid bi-annual protocols catch.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Append-only. Previous sections (including Science and Agon) are left untouched. This tab records the clinical claim and the adaptive architecture that follows from it.</p>
+  </section>
+
+
+  <section id="p10" class="sec">
+    <h2><span class="num">U</span>Unity</h2>
+    <p class="lede">Append-only. Something that emerged from the language of the last two days and from the Donor Followup tab: the ArgMax is, in the first instance, increased sampling of the Engine. That single move unifies the clinical architecture with the canopy, the science pentad, the SoftMax/ArgMax distinction, and the V → I′ return.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The five-stage loop, restated</h3>
+    <div class="body">
+<pre><code>I.   Engine
+II.  Sample
+III. Variation
+IV.  Distribution / SoftMax
+V.   Budget / ArgMax  →  I′</code></pre>
+    </div>
+    <p class="note">This is the same pentad that has been running through the hermeneutics page, the tree, the science page, the stress/cortisol mapping, and the donor architecture. The labels shift by domain; the operators do not.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The crux: ArgMax as increased sampling of the Engine</h3>
+    <div class="body">
+      <p>In the Donor Followup stance the default is sparse, low-cost sampling of the Engine (the brother’s physiology, the personalized eGFR trajectory). Most of the time the system stays at II — a light Sample. When the trajectory approaches a cliff, the decision is not “run a different science.” The decision is to raise the sampling rate and the sampling quality of the <em>same</em> Engine: more frequent draws, added markers (HbA1c, SBP, etc.). That escalation <em>is</em> the ArgMax.</p>
+      <p>ArgMax here is not a final ranking over a fixed distribution of options. It is the commitment of budget (attention, lab cost, frequency, the brother’s time) to denser observation of the generative substrate itself. The SoftMax at IV still ranks possibilities; the ArgMax at V spends limited resource to resolve uncertainty by interrogating the Engine more closely. The next I′ is the updated model of that Engine after the denser sample has been absorbed.</p>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">How this unifies the last two days</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Domain</th><th>I → II → III → IV → V → I′</th><th>Where ArgMax = denser Engine sampling</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="rn">1</td>
+            <td data-label="Domain"><strong>Donor Followup</strong></td>
+            <td data-label="I → II → III → IV → V → I′">Physiology (Engine) → sparse eGFR/trajectory (Sample) → noise and possible injury paths (Variation) → ranked risk envelope (SoftMax) → decide to intensify labs/frequency (ArgMax/Budget) → updated personal model (I′)</td>
+            <td data-label="Where ArgMax = denser Engine sampling">The cliff trigger is exactly the commitment of budget to sample the Engine more densely.</td>
+          </tr>
+          <tr>
+            <td class="rn">2</td>
+            <td data-label="Domain"><strong>Science page</strong></td>
+            <td data-label="I → II → III → IV → V → I′">Harmonic / prelingual (Engine) → 12TET / tokens / prediction (Sample) → insertions, deletions, permutations (Variation) → consonance/dissonance ranking (SoftMax) → which outliers get wet-lab or institutional budget (ArgMax) → Anthropocene Engine (I′)</td>
+            <td data-label="Where ArgMax = denser Engine sampling">Funding and attention are budget spent to interrogate the biological Engine more closely (automated labs, deeper sequencing).</td>
+          </tr>
+          <tr>
+            <td class="rn">3</td>
+            <td data-label="Domain"><strong>Tree / Canopy</strong></td>
+            <td data-label="I → II → III → IV → V → I′">World / Data (Engine) → Perception / Mimicry / Science (Sample) → Routing / Adaptation (Variation) → Collisions / SoftMax (Distribution) → Embodiment / Selective / Budget (ArgMax) → Soil / next Engine (I′)</td>
+            <td data-label="Where ArgMax = denser Engine sampling">Cambrian / embodiment is the selective commitment of resource; the fruit that falls and is reabsorbed is the denser sampling that updates the soil.</td>
+          </tr>
+          <tr>
+            <td class="rn">4</td>
+            <td data-label="Domain"><strong>Cortisol / Stress</strong></td>
+            <td data-label="I → II → III → IV → V → I′">Ligand milieu, receptors, genetics (Engine) → CRH → ACTH → cortisol pulse (Sample) → substrate release, gluconeogenesis (Variation) → distribution of fatty acids / tissue competition (SoftMax) → visceral receptor density / local regeneration (ArgMax) → updated axis sensitivity (I′)</td>
+            <td data-label="Where ArgMax = denser Engine sampling">Chronic exposure changes receptor and enzyme expression — the system’s own ArgMax over where to “spend” metabolic budget, which then alters the Engine’s next response.</td>
+          </tr>
+          <tr>
+            <td class="rn">5</td>
+            <td data-label="Domain"><strong>Hermeneutics / SoftMax–ArgMax</strong></td>
+            <td data-label="I → II → III → IV → V → I′">Principal / generative substrate (Engine) → Broker / representation (Sample) → Agents / recombination (Variation) → Collisions / rank order (SoftMax) → Will / commitment / budget (ArgMax) → next principal state (I′)</td>
+            <td data-label="Where ArgMax = denser Engine sampling">Authority is the decision to spend limited attention or resource on one path; in the donor case that path is denser sampling of the same Engine rather than a new principal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Why this is the unifying move</h3>
+    <div class="body">
+      <p>Until the Donor Followup tab, ArgMax could still be read as “pick the top of a SoftMax ranking and execute.” The clinical architecture forces a sharper reading: the first and most common ArgMax is the decision to <em>look harder at the Engine</em>. Increased sampling is not a preliminary step before the real decision; it is the decision that budget is for. Everything else (new protocols, new institutions, new technologies) is downstream of that commitment to resolve uncertainty by interrogating the generative substrate more closely.</p>
+      <p>That is why the same five operators appear in cortisol physiology, in genomic AI, in the canopy, and in looking after one brother’s kidney. The loop is the same. The ArgMax is, initially and most often, increased sampling of the Engine. The rest of the architecture follows.</p>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Falsifier for this tab</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Claim</th><th>What would falsify it</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="Claim">ArgMax is, in the first instance, increased sampling of the Engine</td><td data-label="What would falsify it">A domain in the same pentad where the consequential commitment is never a denser interrogation of the generative substrate, and where sampling density is never the scarce resource being allocated.</td></tr>
+          <tr><td class="rn">2</td><td data-label="Claim">This reading unifies the clinical, scientific, canopy, and SoftMax/ArgMax threads of the last two days</td><td data-label="What would falsify it">A residual thread that cannot be stated in I → II → III → IV → V(Budget as denser Engine sampling) → I′ without distortion.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Append-only. Previous sections (including Donor Followup) are left untouched. This tab only records the unifying operator that the language of the last two days made visible.</p>
+  </section>
+
 </main>
 
 <script>
