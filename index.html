@@ -408,6 +408,8 @@
     color: var(--muted);
   }
   .wg:first-child { margin-top: 0; }
+  td a { color: var(--accent); text-underline-offset: 3px; font-weight: 500; }
+  td a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   @media (max-width: 680px) {
     .turn { padding: 12px; }
   }
@@ -450,6 +452,8 @@
           <a href="#s3"><b>3</b><span>Schema-level</span></a>
           <a href="#s4"><b>4</b><span>File hygiene</span></a>
           <a href="#s5"><b>5</b><span>Diagram</span></a>
+          <p class="wg">Reference</p>
+          <a href="#ref"><b>R</b><span>Hermeneutics</span></a>
         </nav>
       </div>
       <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
@@ -1077,6 +1081,23 @@ V. Index (CEN) / Motor-Cortex
       </div>
       <figcaption>Recurrent controller from the ChatGPT comments. File: <code>ukhona/mermaid-diagram.png</code></figcaption>
     </figure>
+  </section>
+
+  <div class="group">Reference</div>
+  <section id="ref" class="sec">
+    <h2><span class="num">R</span>Reference</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Source</th><th>Address</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="rn">I</td>
+            <td data-label="Source"><a href="https://ukubona-llc.github.io/hermeneutics/">Art is SoftMax, Life is ArgMax — Ukubona</a></td>
+            <td data-label="Address"><code>ukubona-llc.github.io/hermeneutics</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </main>
 
