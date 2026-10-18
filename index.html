@@ -469,6 +469,7 @@
           <a href="#p13"><b>M</b><span>Margin Account</span></a>
           <a href="#p14"><b>C</b><span>Compression</span></a>
           <a href="#p15"><b>D</b><span>Engine at IV</span></a>
+          <a href="#p16"><b>Q</b><span>Alphabet case</span></a>
           <p class="wg">Reference</p>
           <a href="#ref"><b>R</b><span>Hermeneutics</span></a>
         </nav>
@@ -2116,6 +2117,67 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
     </div>
 
     <p class="note">Hedge: the identity is an accounting decomposition. Credit spread is a rate. Haircut, margin call and forced liquidity are quantity limits or events, so they enter as rate-equivalents: the carry cost of the extra equity a haircut forces, the funding cost of cash raised on the lender's clock, and the price impact of selling under pressure. The terms are not independent (wider spreads raise haircuts, haircuts raise calls, calls force sales), so the order is causal, and the sum should not be read as an additive regression. The readings of A, B and C and the one-line reading of E are crude by design. Append-only. Previous sections (including Compression) are left untouched.</p>
+  </section>
+
+  <section id="p16" class="sec">
+    <h2><span class="num">Q</span>Case study: Alphabet, C down, g up</h2>
+    <p class="lede">One quarter where cash flow fell as growth claims rose. Read through D and E, the equity became a longer-duration claim, and the market put a haircut on management's own mark on g.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">What the quarter reported (July 22, 2026)</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Item</th><th>Reported</th><th>Reads as</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="Item">Free cash flow</td><td data-label="Reported">Negative $5.9B, the first negative quarter since the 2004 IPO</td><td data-label="Reads as"><span class="math">CF<sub>1</sub></span> falls</td></tr>
+          <tr><td class="rn">2</td><td data-label="Item">Capex</td><td data-label="Reported">$44.9B in the quarter. 2026 guide raised to $195–205B from $180–190B, with 2027 to rise significantly beyond that</td><td data-label="Reads as">Cash flow spent now to buy g later</td></tr>
+          <tr><td class="rn">3</td><td data-label="Item">Cloud</td><td data-label="Reported">Revenue up 82% to about $24.8B. Backlog $514B, about half expected to convert within 24 months</td><td data-label="Reads as"><span class="math">g</span>, as demand</td></tr>
+          <tr><td class="rn">4</td><td data-label="Item">Gemini app</td><td data-label="Reported">950M monthly users at the report. Past 1B in August</td><td data-label="Reads as">Reach, not yet cash flow</td></tr>
+          <tr><td class="rn">5</td><td data-label="Item">Balance sheet</td><td data-label="Reported">$242.5B cash and marketable securities. A recent $100B debt raise</td><td data-label="Reads as">A borrower at II and III, with no call in sight</td></tr>
+          <tr><td class="rn">6</td><td data-label="Item">Market reaction</td><td data-label="Reported">Shares down roughly 3 to 7 percent, depending on source and measure. Described as a sector pattern: beat on revenue, raise capex, stock falls</td><td data-label="Reads as">A discount on <span class="math">g</span>, not a change in <span class="math">r</span> (a reading, see falsifiers)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The first reading and the clarification</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>First reading</th><th>Clarification</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="First reading">The price tanked after Gemini reached 1B monthly users</td><td data-label="Clarification">The July 22 report said 950M. The 1B mark came in August. The reasons given for the July fall were capex and cash flow, not the user count. A later piece dated Aug 11 also shows the stock down 3.8% with 1B listed as a positive, so the stock fell around both dates and the report is where the cause is stated</td></tr>
+          <tr><td class="rn">2</td><td data-label="First reading">C fell despite a large g, which looks contradictory</td><td data-label="Clarification">It is consistent. Capex is the price of g and is paid first. The one-line <span class="math">P<sub>E</sub> = CF<sub>1</sub> / (r<sub>eff</sub> − g)</span> needs <span class="math">CF<sub>1</sub> &gt; 0</span>. With negative cash flow now and large cash flow later, a multi-stage version is needed, and the claim has longer duration, so the g end of the curve carries more weight</td></tr>
+          <tr><td class="rn">3</td><td data-label="First reading">g will be very large</td><td data-label="Clarification">That is an expectation, and the backlog supports demand. But g in the formula is growth in cash flow, not in revenue or users. Heavy capex delays the conversion, and the coverage does not name paying Gemini subscribers, so 1B is reach</td></tr>
+          <tr><td class="rn">4</td><td data-label="First reading">C as cash flow</td><td data-label="Clarification">The right quantity, but C already names currency on this page, so it is written <span class="math">CF<sub>1</sub></span> here. This was a symbol clash from the earlier equity line, not a misreading</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Where it sits in the column</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Term</th><th>In this case</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">I</td><td data-label="Term"><span class="math">r<sub>eff</sub> − r<sub>f</sub></span></td><td data-label="In this case">No single number in the reports. It is the sum of the four lines below as the market applies them to Alphabet</td></tr>
+          <tr><td class="rn">II</td><td data-label="Term">Credit spread</td><td data-label="In this case">Present: a $100B debt raise means Alphabet now pays a spread to fund the build</td></tr>
+          <tr><td class="rn">III</td><td data-label="Term">Haircut</td><td data-label="In this case">The live term: the market's discount on management's mark on g. Cloud beat and the stock still fell</td></tr>
+          <tr><td class="rn">IV</td><td data-label="Term">Margin call</td><td data-label="In this case">Not in play: $242.5B in cash and securities</td></tr>
+          <tr><td class="rn">V</td><td data-label="Term">Forced liquidity</td><td data-label="In this case">Not in play. The pressure is a repricing, not a forced sale</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Claim</th><th>What would falsify it</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="Claim">The fall is a haircut on g, not a move in r</td><td data-label="What would falsify it">The broad market or long yields moved by a similar amount on the same days, or peers with no capex raise fell as much</td></tr>
+          <tr><td class="rn">2</td><td data-label="Claim">Negative cash flow made the equity a longer-duration claim</td><td data-label="What would falsify it">The stock's sensitivity to long yields did not rise after free cash flow turned negative</td></tr>
+          <tr><td class="rn">3</td><td data-label="Claim">Alphabet sits at II and III, not IV and V</td><td data-label="What would falsify it">Collateral calls, forced asset sales, or a sharp widening of spreads on its new debt</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Sources, as found on Oct 18, 2026: <a href="https://www.implicator.ai/google-says-gemini-reached-950-million-monthly-users-as-cash-flow-turned-negative/" target="_blank" rel="noopener">Implicator on the July 22 report</a>, <a href="https://rivkin.com.au/?p=37098" target="_blank" rel="noopener">Rivkin summary of the quarter</a>, <a href="https://www.implicator.ai/google-puts-gemini-at-1-billion-monthly-users-without-naming-paying-subscribers/" target="_blank" rel="noopener">Implicator on the 1B mark</a>, <a href="https://www.marketbeat.com/instant-alerts/alphabet-nasdaqgoogl-stock-price-down-38-time-to-sell-2026-08-11" target="_blank" rel="noopener">MarketBeat, Aug 11</a>.</p>
+    <p class="note">Hedge: the sources disagree on the prior-year free cash flow (about $25B in one report, $10.4B in another), on reported EPS, and on the size of the share-price move, so check the numbers against the filing before relying on them. The haircut reading is an interpretation and cannot be separated here from rates or the broader market. Append-only. Previous sections (including The engine at IV) are left untouched.</p>
   </section>
 
 </main>
