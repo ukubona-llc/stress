@@ -2011,21 +2011,21 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
 
   <section id="p15" class="sec">
     <h2><span class="num">D</span>The engine at IV: r<sub>eff</sub> − r<sub>f</sub></h2>
-    <p class="lede">The rate is paid at D, and D has a five-part interior of its own. The wedge between the all-in rate and the risk-free one is four terms. With r<sub>f</sub> as the floor they make five, so the same column runs across I to V and again inside D at i to v.</p>
+    <p class="lede">The rate is paid at D, and D has a five-part interior of its own. I is the wedge itself, r<sub>eff</sub> − r<sub>f</sub>. II to V are the four terms it is made of. The same column runs across I to V and again inside D at i to v.</p>
 
     <div class="body"><pre><code>r_eff − r_f  =  Credit Spread + Haircut + Margin Call + Forced Liquidity</code></pre></div>
 
     <h3 style="margin:28px 0 10px;font-size:1.1rem">The column on the whole pentad</h3>
     <div class="tablewrap">
       <table>
-        <thead><tr><th>#</th><th>Stage</th><th>Term</th><th>Running rate</th><th>Reads as</th></tr></thead>
+        <thead><tr><th>#</th><th>Stage</th><th>Term</th><th>Reads as</th></tr></thead>
         <tbody>
-          <tr><td class="rn">I</td><td data-label="Stage">Principal</td><td data-label="Term">Risk-free rate <span class="math">r<sub>f</sub></span></td><td data-label="Running rate"><span class="math">r<sub>f</sub></span></td><td data-label="Reads as">The floor, set by whoever's paper is the haven (the question C asks)</td></tr>
-          <tr><td class="rn">II</td><td data-label="Stage">Representation</td><td data-label="Term">Credit spread</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s</span></td><td data-label="Reads as">The pairwise price of trust: this borrower, as represented to that lender</td></tr>
-          <tr><td class="rn">III</td><td data-label="Stage">Agent &amp; Gamete</td><td data-label="Term">Haircut</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s + h</span></td><td data-label="Reads as">The lender's discount to the agent's own mark on what is posted. Collateral reprices (see Margin Account)</td></tr>
-          <tr><td class="rn">IV</td><td data-label="Stage">Collisions</td><td data-label="Term">Margin call</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s + h + m</span></td><td data-label="Reads as">Holdings against obligations on the lender's clock, daily. This is where D lives</td></tr>
-          <tr><td class="rn">V</td><td data-label="Stage">Budget, Survival, Graveyard, Unknowns</td><td data-label="Term">Forced liquidity</td><td data-label="Running rate"><span class="math">= r<sub>eff</sub></span></td><td data-label="Reads as">What gets sold is what can be sold, not what you would choose: A and B go alongside E. <span class="math">[ABCD]↑ E↓</span> breaks here</td></tr>
-          <tr><td class="rn">I′</td><td data-label="Stage">Next principal</td><td data-label="Term">Re-struck floor</td><td data-label="Running rate"><span class="math">r<sub>f</sub>′</span></td><td data-label="Reads as">A backstop is the sovereign resetting <span class="math">r<sub>f</sub></span> after the dash for cash</td></tr>
+          <tr><td class="rn">I</td><td data-label="Stage">Principal</td><td data-label="Term"><span class="math">r<sub>eff</sub> − r<sub>f</sub></span></td><td data-label="Reads as">The wedge itself: what the all-in rate costs over the floor. Everything below is what it is made of</td></tr>
+          <tr><td class="rn">II</td><td data-label="Stage">Representation</td><td data-label="Term">Credit spread</td><td data-label="Reads as">The pairwise price of trust: this borrower, as represented to that lender</td></tr>
+          <tr><td class="rn">III</td><td data-label="Stage">Agent &amp; Gamete</td><td data-label="Term">Haircut</td><td data-label="Reads as">The lender's discount to the agent's own mark on what is posted. Collateral reprices (see Margin Account)</td></tr>
+          <tr><td class="rn">IV</td><td data-label="Stage">Collisions</td><td data-label="Term">Margin call</td><td data-label="Reads as">Holdings against obligations on the lender's clock, daily. This is where D lives</td></tr>
+          <tr><td class="rn">V</td><td data-label="Stage">Budget, Survival, Graveyard, Unknowns</td><td data-label="Term">Forced liquidity</td><td data-label="Reads as">What gets sold is what can be sold, not what you would choose: A and B go alongside E. <span class="math">[ABCD]↑ E↓</span> breaks here. II + III + IV + V sums back to I</td></tr>
+          <tr><td class="rn">I′</td><td data-label="Stage">Next principal</td><td data-label="Term">Re-struck wedge</td><td data-label="Reads as">The next <span class="math">r<sub>eff</sub> − r<sub>f</sub></span>, after the dash for cash has reset the floor and the terms</td></tr>
         </tbody>
       </table>
     </div>
@@ -2035,7 +2035,7 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
       <table>
         <thead><tr><th>#</th><th>Term</th><th>Inside the derivatives book</th></tr></thead>
         <tbody>
-          <tr><td class="rn">i</td><td data-label="Term"><span class="math">r<sub>f</sub></span></td><td data-label="Inside D">The collateral rate the book is carried and discounted at (an overnight rate such as SOFR)</td></tr>
+          <tr><td class="rn">i</td><td data-label="Term"><span class="math">r<sub>eff</sub> − r<sub>f</sub></span></td><td data-label="Inside D">The book's own wedge: what carrying the position costs over the collateral rate (an overnight rate such as SOFR)</td></tr>
           <tr><td class="rn">ii</td><td data-label="Term">Credit spread</td><td data-label="Inside D">Counterparty credit: what the other side's default risk costs (a CVA-style adjustment)</td></tr>
           <tr><td class="rn">iii</td><td data-label="Term">Haircut</td><td data-label="Inside D">Initial margin and collateral haircuts: what the dealer or clearing house takes off whatever is posted</td></tr>
           <tr><td class="rn">iv</td><td data-label="Term">Margin call</td><td data-label="Inside D">Variation margin: the daily mark, settled in cash</td></tr>
@@ -2057,8 +2057,8 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
         <thead><tr><th>#</th><th>Instrument</th><th>Reads</th></tr></thead>
         <tbody>
           <tr><td class="rn">A</td><td data-label="Instrument">Assets (gold)</td><td data-label="Reads">None of it. No counterparty means no spread, haircut or call, so it is the exit from the wedge</td></tr>
-          <tr><td class="rn">B</td><td data-label="Instrument">Bond yields</td><td data-label="Reads">Chiefly <span class="math">r<sub>f</sub></span> plus the credit spread: the I and II terms</td></tr>
-          <tr><td class="rn">C</td><td data-label="Instrument">Currency / FX</td><td data-label="Reads">The <span class="math">r<sub>f</sub></span> term: whose paper sets the floor</td></tr>
+          <tr><td class="rn">B</td><td data-label="Instrument">Bond yields</td><td data-label="Reads">Chiefly the floor <span class="math">r<sub>f</sub></span> plus the credit spread: the II term</td></tr>
+          <tr><td class="rn">C</td><td data-label="Instrument">Currency / FX</td><td data-label="Reads">The floor <span class="math">r<sub>f</sub></span> that I is measured against: whose paper sets it</td></tr>
           <tr><td class="rn">D</td><td data-label="Instrument">Derivatives</td><td data-label="Reads">All four wedge terms, margin and liquidation above all. This is where <span class="math">r<sub>eff</sub></span> is realized</td></tr>
           <tr><td class="rn">E</td><td data-label="Instrument">Equities</td><td data-label="Reads">The residual claim on g: <span class="math">P<sub>E</sub> = C / (r<sub>eff</sub> − g)</span></td></tr>
         </tbody>
@@ -2070,7 +2070,7 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
       <table>
         <thead><tr><th>#</th><th>Claim</th><th>What would falsify it</th></tr></thead>
         <tbody>
-          <tr><td class="rn">1</td><td data-label="Claim">The four wedge terms fill slots II to V of the pentad, with <span class="math">r<sub>f</sub></span> at I</td><td data-label="What would falsify it">A wedge term that belongs to no stage, or two terms that collapse into one stage</td></tr>
+          <tr><td class="rn">1</td><td data-label="Claim">I is the wedge <span class="math">r<sub>eff</sub> − r<sub>f</sub></span> and the four terms fill II to V</td><td data-label="What would falsify it">A term that belongs to no stage, two terms that collapse into one stage, or terms that do not sum back to I</td></tr>
           <tr><td class="rn">2</td><td data-label="Claim">The interior of D repeats the column in the same order</td><td data-label="What would falsify it">A book where close-out precedes the call, or where one of the five is absent</td></tr>
           <tr><td class="rn">3</td><td data-label="Claim">The call at IV and the variation margin at iv are the same fixed point</td><td data-label="What would falsify it">Outer calls run on a different clock from the daily mark, so they are different quantities</td></tr>
           <tr><td class="rn">4</td><td data-label="Claim">A wider wedge lowers equities at fixed g</td><td data-label="What would falsify it">Episodes where the wedge widens and equities rise with no upward revision to g</td></tr>
@@ -2148,4 +2148,4 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
 })();
 </script>
 </body>
-</html>
+</html> 
