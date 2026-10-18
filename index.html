@@ -2015,6 +2015,43 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
 
     <div class="body"><pre><code>r_eff − r_f  =  Credit Spread + Haircut + Margin Call + Forced Liquidity</code></pre></div>
 
+    <figure>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow-x:auto">
+        <svg viewBox="0 0 720 384" style="display:block;width:100%;min-width:560px;height:auto" role="img" aria-label="Hypothetical stressed yield curves from overnight to 30 years. The risk-free curve slopes gently upward. The all-in curve slopes steeply downward from a high overnight level, so the shaded wedge between them is widest at the short end, labelled r, and narrowest at the long end, labelled g. The wedge is stacked from credit spread, haircut, margin call and forced liquidity.">
+          <style>
+            .yc-t{fill:var(--muted);font:500 12px var(--font-mono)}
+            .yc-b{fill:var(--fg);font-weight:600}
+            .yc-grid{stroke:var(--line);stroke-width:1;stroke-dasharray:2 4}
+            .yc-axis{stroke:var(--muted);stroke-width:1.2}
+          </style>
+          <line x1="70" x2="660" y1="50" y2="50" class="yc-grid"/><line x1="70" x2="660" y1="110" y2="110" class="yc-grid"/><line x1="70" x2="660" y1="170" y2="170" class="yc-grid"/><line x1="70" x2="660" y1="230" y2="230" class="yc-grid"/>
+          <line x1="70" x2="660" y1="290" y2="290" class="yc-axis"/>
+          <line x1="70" x2="70" y1="50" y2="290" class="yc-axis"/>
+    <polygon points="90,155.0 250,143.0 450,137.0 640,134.0 640,143.0 450,152.0 250,164.0 90,170.0" style="fill:var(--accent);fill-opacity:0.22;stroke:none"/>
+    <polygon points="90,137.0 250,125.0 450,128.0 640,131.0 640,134.0 450,137.0 250,143.0 90,155.0" style="fill:var(--accent);fill-opacity:0.42;stroke:none"/>
+    <polygon points="90,104.0 250,110.0 450,125.0 640,129.5 640,131.0 450,128.0 250,125.0 90,137.0" style="fill:var(--accent);fill-opacity:0.64;stroke:none"/>
+    <polygon points="90,68.0 250,98.0 450,122.0 640,128.0 640,129.5 450,125.0 250,110.0 90,104.0" style="fill:var(--accent);fill-opacity:0.88;stroke:none"/>
+          <polyline points="90,170.0 250,164.0 450,152.0 640,143.0" style="fill:none;stroke:var(--fg);stroke-width:2;stroke-linejoin:round"/>
+          <polyline points="90,68.0 250,98.0 450,122.0 640,128.0" style="fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round"/>
+          <circle cx="90" cy="170.0" r="3.5" style="fill:var(--surface);stroke:var(--fg);stroke-width:1.6"/><circle cx="250" cy="164.0" r="3.5" style="fill:var(--surface);stroke:var(--fg);stroke-width:1.6"/><circle cx="450" cy="152.0" r="3.5" style="fill:var(--surface);stroke:var(--fg);stroke-width:1.6"/><circle cx="640" cy="143.0" r="3.5" style="fill:var(--surface);stroke:var(--fg);stroke-width:1.6"/>
+          <circle cx="90" cy="68.0" r="4" style="fill:var(--surface);stroke:var(--accent);stroke-width:2"/><circle cx="250" cy="98.0" r="4" style="fill:var(--surface);stroke:var(--accent);stroke-width:2"/><circle cx="450" cy="122.0" r="4" style="fill:var(--surface);stroke:var(--accent);stroke-width:2"/><circle cx="640" cy="128.0" r="4" style="fill:var(--surface);stroke:var(--accent);stroke-width:2"/>
+          <text x="100" y="58.0" class="yc-t"><tspan class="yc-b" style="fill:var(--accent)">r_eff</tspan></text>
+          <text x="100" y="190.0" class="yc-t"><tspan class="yc-b">r_f</tspan></text>
+          <path d="M90 30 V24 H250 V30" style="fill:none;stroke:var(--muted);stroke-width:1.2"/>
+          <text x="170" y="17" text-anchor="middle" class="yc-t"><tspan class="yc-b">r</tspan>  short end, D, margin settles daily</text>
+          <path d="M450 30 V24 H640 V30" style="fill:none;stroke:var(--muted);stroke-width:1.2"/>
+          <text x="545" y="17" text-anchor="middle" class="yc-t"><tspan class="yc-b">g</tspan>  long end, E, the claim on growth</text>
+          <text x="350" y="170" text-anchor="middle" class="yc-t" style="opacity:.0"> </text>
+          <text x="22" y="170" transform="rotate(-90 22 170)" text-anchor="middle" class="yc-t">rate (hypothetical)</text>
+          <line x1="90" x2="90" y1="290" y2="296" class="yc-axis"/><text x="90" y="314" text-anchor="middle" class="yc-t">Overnight</text><line x1="250" x2="250" y1="290" y2="296" class="yc-axis"/><text x="250" y="314" text-anchor="middle" class="yc-t">2Y</text><line x1="450" x2="450" y1="290" y2="296" class="yc-axis"/><text x="450" y="314" text-anchor="middle" class="yc-t">10Y</text><line x1="640" x2="640" y1="290" y2="296" class="yc-axis"/><text x="640" y="314" text-anchor="middle" class="yc-t">30Y</text>
+          <text x="365" y="330" text-anchor="middle" class="yc-t">tenor</text>
+          <text x="70" y="346" class="yc-t"><tspan class="yc-b">I</tspan>  r_eff − r_f is the whole shaded band; II to V stack inside it</text><rect x="70" y="358" width="14" height="10" style="fill:var(--accent);fill-opacity:0.22"/><text x="90" y="367" class="yc-t"><tspan class="yc-b">II</tspan> Credit spread</text><rect x="215" y="358" width="14" height="10" style="fill:var(--accent);fill-opacity:0.42"/><text x="235" y="367" class="yc-t"><tspan class="yc-b">III</tspan> Haircut</text><rect x="320" y="358" width="14" height="10" style="fill:var(--accent);fill-opacity:0.64"/><text x="340" y="367" class="yc-t"><tspan class="yc-b">IV</tspan> Margin call</text><rect x="430" y="358" width="14" height="10" style="fill:var(--accent);fill-opacity:0.88"/><text x="450" y="367" class="yc-t"><tspan class="yc-b">V</tspan> Forced liquidity</text>
+        </svg>
+      </div>
+      <figcaption>Hypothetical stressed curve, illustrative and not data. The wedge is read at every tenor, not at one spot price: it is widest at the short end (r), where margin is called and liquidity is forced, and thinnest at the long end (g), where the claim on growth sits. Bands are II to V stacked on r_f; their sum is I.</figcaption>
+    </figure>
+
+
     <h3 style="margin:28px 0 10px;font-size:1.1rem">The column on the whole pentad</h3>
     <div class="tablewrap">
       <table>
@@ -2148,4 +2185,4 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
 })();
 </script>
 </body>
-</html> 
+</html>
