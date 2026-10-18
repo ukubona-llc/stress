@@ -468,6 +468,7 @@
           <a href="#p12"><b>C</b><span>Coen Duo</span></a>
           <a href="#p13"><b>M</b><span>Margin Account</span></a>
           <a href="#p14"><b>C</b><span>Compression</span></a>
+          <a href="#p15"><b>D</b><span>Engine at IV</span></a>
           <p class="wg">Reference</p>
           <a href="#ref"><b>R</b><span>Hermeneutics</span></a>
         </nav>
@@ -2006,6 +2007,78 @@ carry period  &lt;  vindication horizon   ⇒   the ideal dies solvent in its ow
     <p class="note">The layers line up with operators I to V by index count: one index at the sovereign, two at the kin network, three at the enterprise, and one more letter at each of the last two.</p>
 
     <p class="note">Hedge: the Hormuz premises behind the scenario (Brent near $110, a month-9 blockade, the "after the midterms" quote) are model givens, not verified facts. The <span class="math">[ABCD]↑ E↓</span> reading is crude by design: it holds in an inflationary supply shock and breaks in a dash for cash. Append-only. Previous sections (including Margin Account) are left untouched.</p>
+  </section>
+
+  <section id="p15" class="sec">
+    <h2><span class="num">D</span>The engine at IV: r<sub>eff</sub> − r<sub>f</sub></h2>
+    <p class="lede">The rate is paid at D, and D has a five-part interior of its own. The wedge between the all-in rate and the risk-free one is four terms. With r<sub>f</sub> as the floor they make five, so the same column runs across I to V and again inside D at i to v.</p>
+
+    <div class="body"><pre><code>r_eff − r_f  =  Credit Spread + Haircut + Margin Call + Forced Liquidity</code></pre></div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The column on the whole pentad</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Stage</th><th>Term</th><th>Running rate</th><th>Reads as</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">I</td><td data-label="Stage">Principal</td><td data-label="Term">Risk-free rate <span class="math">r<sub>f</sub></span></td><td data-label="Running rate"><span class="math">r<sub>f</sub></span></td><td data-label="Reads as">The floor, set by whoever's paper is the haven (the question C asks)</td></tr>
+          <tr><td class="rn">II</td><td data-label="Stage">Representation</td><td data-label="Term">Credit spread</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s</span></td><td data-label="Reads as">The pairwise price of trust: this borrower, as represented to that lender</td></tr>
+          <tr><td class="rn">III</td><td data-label="Stage">Agent &amp; Gamete</td><td data-label="Term">Haircut</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s + h</span></td><td data-label="Reads as">The lender's discount to the agent's own mark on what is posted. Collateral reprices (see Margin Account)</td></tr>
+          <tr><td class="rn">IV</td><td data-label="Stage">Collisions</td><td data-label="Term">Margin call</td><td data-label="Running rate"><span class="math">r<sub>f</sub> + s + h + m</span></td><td data-label="Reads as">Holdings against obligations on the lender's clock, daily. This is where D lives</td></tr>
+          <tr><td class="rn">V</td><td data-label="Stage">Budget, Survival, Graveyard, Unknowns</td><td data-label="Term">Forced liquidity</td><td data-label="Running rate"><span class="math">= r<sub>eff</sub></span></td><td data-label="Reads as">What gets sold is what can be sold, not what you would choose: A and B go alongside E. <span class="math">[ABCD]↑ E↓</span> breaks here</td></tr>
+          <tr><td class="rn">I′</td><td data-label="Stage">Next principal</td><td data-label="Term">Re-struck floor</td><td data-label="Running rate"><span class="math">r<sub>f</sub>′</span></td><td data-label="Reads as">A backstop is the sovereign resetting <span class="math">r<sub>f</sub></span> after the dash for cash</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">The same column inside D</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Term</th><th>Inside the derivatives book</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">i</td><td data-label="Term"><span class="math">r<sub>f</sub></span></td><td data-label="Inside D">The collateral rate the book is carried and discounted at (an overnight rate such as SOFR)</td></tr>
+          <tr><td class="rn">ii</td><td data-label="Term">Credit spread</td><td data-label="Inside D">Counterparty credit: what the other side's default risk costs (a CVA-style adjustment)</td></tr>
+          <tr><td class="rn">iii</td><td data-label="Term">Haircut</td><td data-label="Inside D">Initial margin and collateral haircuts: what the dealer or clearing house takes off whatever is posted</td></tr>
+          <tr><td class="rn">iv</td><td data-label="Term">Margin call</td><td data-label="Inside D">Variation margin: the daily mark, settled in cash</td></tr>
+          <tr><td class="rn">v</td><td data-label="Term">Forced liquidity</td><td data-label="Inside D">Close-out: the default waterfall and forced unwinding at whatever the market will bear</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="body"><pre><code>I ──► II ──► III ──► IV ──► V ──► I′
+                      │
+                      D :  i ──► ii ──► iii ──► iv ──► v ──► i′
+                                                 │
+                                                 the call again, on a shorter clock</code></pre></div>
+    <p class="note">The part has the shape of the whole, and the margin call is the item that sits at IV outside and at iv inside. The recursion stops at the clock: daily margin can be opened into intraday margin, and below that there is no separate call left to open.</p>
+
+    <h3 style="margin:28px 0 10px;font-size:1.1rem">Where the instruments read the wedge</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Instrument</th><th>Reads</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">A</td><td data-label="Instrument">Assets (gold)</td><td data-label="Reads">None of it. No counterparty means no spread, haircut or call, so it is the exit from the wedge</td></tr>
+          <tr><td class="rn">B</td><td data-label="Instrument">Bond yields</td><td data-label="Reads">Chiefly <span class="math">r<sub>f</sub></span> plus the credit spread: the I and II terms</td></tr>
+          <tr><td class="rn">C</td><td data-label="Instrument">Currency / FX</td><td data-label="Reads">The <span class="math">r<sub>f</sub></span> term: whose paper sets the floor</td></tr>
+          <tr><td class="rn">D</td><td data-label="Instrument">Derivatives</td><td data-label="Reads">All four wedge terms, margin and liquidation above all. This is where <span class="math">r<sub>eff</sub></span> is realized</td></tr>
+          <tr><td class="rn">E</td><td data-label="Instrument">Equities</td><td data-label="Reads">The residual claim on g: <span class="math">P<sub>E</sub> = C / (r<sub>eff</sub> − g)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><strong>D gives r, E gives g.</strong> On a constant-growth reading, equity is priced on the gap between the all-in rate and growth. At fixed g a widening wedge lowers <span class="math">P<sub>E</sub></span>, so <span class="math">[ABCD]↑ E↓</span> falls out of one line. The line stops describing prices at V, where sellers are forced and the price clears on liquidity rather than on cash flows.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Claim</th><th>What would falsify it</th></tr></thead>
+        <tbody>
+          <tr><td class="rn">1</td><td data-label="Claim">The four wedge terms fill slots II to V of the pentad, with <span class="math">r<sub>f</sub></span> at I</td><td data-label="What would falsify it">A wedge term that belongs to no stage, or two terms that collapse into one stage</td></tr>
+          <tr><td class="rn">2</td><td data-label="Claim">The interior of D repeats the column in the same order</td><td data-label="What would falsify it">A book where close-out precedes the call, or where one of the five is absent</td></tr>
+          <tr><td class="rn">3</td><td data-label="Claim">The call at IV and the variation margin at iv are the same fixed point</td><td data-label="What would falsify it">Outer calls run on a different clock from the daily mark, so they are different quantities</td></tr>
+          <tr><td class="rn">4</td><td data-label="Claim">A wider wedge lowers equities at fixed g</td><td data-label="What would falsify it">Episodes where the wedge widens and equities rise with no upward revision to g</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Hedge: the identity is an accounting decomposition. Credit spread is a rate. Haircut, margin call and forced liquidity are quantity limits or events, so they enter as rate-equivalents: the carry cost of the extra equity a haircut forces, the funding cost of cash raised on the lender's clock, and the price impact of selling under pressure. The terms are not independent (wider spreads raise haircuts, haircuts raise calls, calls force sales), so the order is causal, and the sum should not be read as an additive regression. The readings of A, B and C and the one-line reading of E are crude by design. Append-only. Previous sections (including Compression) are left untouched.</p>
   </section>
 
 </main>
