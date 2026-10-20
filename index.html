@@ -435,6 +435,7 @@
           </svg>
         </button>
         <nav id="waffle-panel" class="waffle-panel" aria-label="Sections" hidden>
+          <a href="#preface"><b>0</b><span>Preface: weight</span></a>
           <p class="wg">Gemini session</p>
           <a href="#g1"><b>G1</b><span>Cortisol axis</span></a>
           <a href="#g2"><b>G2</b><span>Famine &amp; Ang II</span></a>
@@ -500,6 +501,244 @@
 <main id="top" class="wrap">
   <h1>Session, comments and critique</h1>
   <p class="lede">The Gemini session, the ChatGPT comments and my critique, in the order they happened.</p>
+
+  <section id="preface" class="sec">
+<h2><span class="num">0</span>Preface: a weight curve that cycles</h2>
+<p class="note" style="margin-top:0">Below is the weight graph from the <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">Weight tab of the Hermeneutics page</a>, drawn from the same data. The original readings, the table behind them and the source notes live there: <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">https://ukubona-llc.github.io/hermeneutics/#weight</a></p>
+<style>
+#wchart{--ink:var(--fg);--card:var(--surface);--rule:var(--line);--soft:var(--wash);--blue:var(--accent);--serif:var(--font-sans);--mono:var(--font-mono);--amber:#a85f00;--violet:#5a45d6;--green:#13765a}
+:root[data-theme="dark"] #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa;--flag:#ff7a6b}}
+#wchart{--flag:#c0392b;display:grid;gap:16px;margin:18px 0 26px;font-size:15px;line-height:1.5}
+:root[data-theme="dark"] #wchart{--flag:#ff7a6b}
+#wchart h3.wh{font-family:var(--serif);font-weight:400;font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0;text-wrap:balance}#wchart .w-sub{color:var(--muted);margin:6px 0 0;max-width:65ch}#wchart .w-stats{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:13px;color:var(--muted)}#wchart .w-stats b{color:var(--ink);font-weight:500}#wchart .w-controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}#wchart .w-group{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-width:0}#wchart .w-group>span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}#wchart button,#wchart .w-chip{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:5px 10px;cursor:pointer}#wchart button:hover{border-color:var(--muted)}#wchart button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}#wchart button:focus-visible,#wchart svg:focus-visible{outline:2px solid var(--blue);outline-offset:2px}#wchart .w-chip{display:inline-flex;gap:7px;align-items:center}#wchart .w-chip i{width:11px;height:11px;border-radius:50%;display:inline-block;border:2px solid currentColor}#wchart .w-chip[aria-pressed="false"]{opacity:.45;background:transparent;color:var(--ink)}#wchart .w-chip[aria-pressed="true"]{background:var(--card);color:var(--ink);border-color:var(--ink)}#wchart .w-plot{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px 8px 6px;position:relative}#wchart svg{display:block;width:100%;height:auto;touch-action:pan-y;user-select:none}#wchart svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}#wchart .w-grid{stroke:var(--soft);stroke-width:1}#wchart .w-axis{stroke:var(--rule);stroke-width:1}#wchart .w-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:6px;padding:8px 10px;font-size:12.5px;line-height:1.4;max-width:240px;z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.25)}#wchart .w-tip b{font-family:var(--mono);font-size:16px;font-weight:500}#wchart .w-tip .w-tag{display:block;opacity:.8;font-size:11.5px;margin-top:2px}#wchart .w-hint{font-size:12.5px;color:var(--muted)}#wchart .w-tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--card);max-height:420px;overflow-y:auto}#wchart table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.5px}#wchart th,#wchart td{padding:7px 12px;text-align:left;border-bottom:1px solid var(--soft)}#wchart th{position:sticky;top:0;background:var(--card);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}#wchart td.w-n{font-family:var(--mono);font-variant-numeric:tabular-nums}#wchart td.w-l{color:var(--muted)}#wchart tr.on td{background:var(--soft)}#wchart .w-notes{font-size:13px;color:var(--muted);display:grid;gap:4px}
+
+
+#wchart .w-tip{transition:opacity .1s}@media (prefers-reduced-motion:reduce){#wchart .w-tip{transition:none}}
+</style>
+<div id="wchart">
+  <header class="w-head">
+    <h3 class="wh">Weight over time</h3>
+    <p class="w-sub">Every reading from the Weight tab of the Hermeneutics page, 2016 to now, on a true calendar axis. Equal distances on the horizontal axis are equal spans of time, whatever the sampling.</p>
+  </header>
+  <div class="w-stats" id="wc-stats"></div>
+
+  <div class="w-controls">
+    <div class="w-group" id="wc-ranges"><span>Range</span></div>
+    <div class="w-group" id="wc-srcs"><span>Show</span></div>
+    <div class="w-group"><span>Y axis</span><button id="wc-clip" aria-pressed="false" title="Cap the vertical axis at 260 lb so the 485 reading does not flatten everything else">Cap at 260 lb</button></div>
+  </div>
+
+  <div class="w-plot" id="wc-plot">
+    <svg id="wc-svg" role="img" tabindex="0" aria-label="Weight in pounds against date. Use left and right arrow keys to step through readings."></svg>
+    <div class="w-tip" id="wc-tip" hidden></div>
+  </div>
+  <div class="w-hint">Drag across the chart to zoom into a span of dates. Arrow keys step through readings. Hollow rings mark points reported in the note on that page, not found in the export.</div>
+
+  <details><summary style="cursor:pointer;color:var(--muted);font-size:13px">Show every reading as a table</summary><div class="w-tw"><table><thead><tr><th>Date</th><th>Time</th><th>Weight (lb)</th><th>Source</th></tr></thead><tbody id="wc-rows"></tbody></table></div></details>
+  <div class="w-notes">
+    <div>Source icons are as listed on the Hermeneutics page: ❤️ is the health export, 📱 is the iPhone. Unverified points are plotted and labeled. The two 220.5 lb readings logged in March 2020 are imputed to 190 lb and placed in Dec 2019 (green rings, dashed links to the neighboring readings); the original values are kept in the tooltip text and table. The 485 lb entry on 2020-03-15 is left out as an obvious typo.</div>
+    <div>2025–26 points come from the typed note on the Hermeneutics page ("began 2025 at 236 · 170 by June · 190 by October · now in 2026 October about 235"). Their days are placed mid-month for plotting.</div>
+  </div>
+</div>
+<script>
+(function(){
+var D=function(s){return new Date(s+'T00:00:00Z').getTime()};
+// date, time, lbs, kind: h=health export, p=iPhone, u=unverified, r=reported
+var raw=[
+["2016-11-05","01:20",216,"h"],["2017-10-05","02:57",178,"h"],["2017-11-17","08:02",165,"h"],["2017-11-19","01:30",175,"h"],
+["2018-02-22","00:51",177,"h"],["2018-04-18","15:15",170,"h"],["2018-10-12","15:14",190,"h"],["2018-12-01","17:11",175,"h"],
+["2020-03-01","08:09",175,"h"],["2020-03-01","22:38",176.4,"h"],["2020-03-04","08:11",175,"h"],["2020-03-05","22:38",176.4,"h"],
+["2020-03-07","08:11",175,"h"],["2020-03-09","07:09",175,"h"],["2019-12-10","21:37",190,"i",220.5],["2020-03-11","07:08",175,"h"],
+["2020-03-13","07:09",175,"h"],["2019-12-19","21:36",190,"i",220.5],["2020-03-22","07:10",175,"h"],
+["2020-03-24","21:40",176.4,"h"],["2020-03-29","07:11",175,"h"],["2021-02-22","08:13",220,"h"],["2021-07-31","01:37",198.4,"h"],
+["2021-08-05","13:43",203,"h"],["2022-02-05","14:45",183.2,"h"],["2022-02-07","19:48",179.8,"h"],["2022-03-20","13:44",177.2,"h"],
+["2022-04-11","04:12",177.2,"h"],["2022-05-31","09:47",177.6,"h"],["2022-08-03","18:37",175.2,"h"],["2022-08-05","13:36",174.6,"h"],
+["2022-08-06","16:44",171.6,"h"],["2022-08-07","22:49",170.4,"h"],["2022-10-12","19:40",200,"h"],["2022-10-23","09:31",188,"h"],
+["2023-01-23","13:54",205,"p"],["2023-06-09","10:05",212,"h"],["2023-10-21","21:32",234,"p"],["2024-04-07","22:17",220,"h"],
+["2025-01-15","",236,"r"],["2025-06-15","",170,"r"],["2025-10-15","",190,"r"],["2026-10-15","",235,"r"]
+];
+var pts=raw.map(function(r){
+  var t=D(r[0])+(r[1]?(+r[1].slice(0,2)*60+ +r[1].slice(3))*60000:12*3600000);
+  return {t:t,d:r[0],tm:r[1],w:r[2],k:r[3],o:r[4]};
+}).sort(function(a,b){return a.t-b.t});
+var KINDS={
+  h:{name:"Health export",color:"var(--blue)",tag:"Health export (❤️)"},
+  p:{name:"iPhone",color:"var(--violet)",tag:"iPhone (📱)"},
+  u:{name:"Unverified",color:"var(--flag)",tag:"Unverified reading, plotted as recorded"},
+  i:{name:"Imputed",color:"var(--green)",tag:"Imputed: logged as 220.5 lb in March 2020, set to 190 lb and moved to Dec 2019"},
+  r:{name:"Reported",color:"var(--amber)",tag:"Reported in the tab's note, not in the export"}
+};
+var on={h:true,p:true,u:true,i:true,r:true};
+var X0=D("2016-09-01"),X1=D("2026-12-01");
+var view={a:X0,b:X1}, clip=false, sel=-1;
+var DAY=86400000;
+var svg=document.getElementById('wc-svg'),tip=document.getElementById('wc-tip'),plot=document.getElementById('wc-plot');
+var NS='http://www.w3.org/2000/svg';
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+
+var ranges=[["All",X0,X1],["2020 Mar",D("2020-02-26"),D("2020-04-02")],["2021–22",D("2021-01-01"),D("2022-12-31")],["2023–26",D("2022-12-01"),X1]];
+var rg=document.getElementById('wc-ranges');
+ranges.forEach(function(r,i){var b=document.createElement('button');b.textContent=r[0];b.dataset.i=i;
+  b.onclick=function(){view={a:r[1],b:r[2]};sel=-1;draw()};rg.appendChild(b)});
+var zb=document.createElement('button');zb.textContent="Reset";zb.onclick=function(){view={a:X0,b:X1};sel=-1;draw()};rg.appendChild(zb);
+
+var sg=document.getElementById('wc-srcs');
+Object.keys(KINDS).forEach(function(k){var b=document.createElement('button');b.className='w-chip';b.setAttribute('aria-pressed','true');
+  b.innerHTML='<i style="color:'+KINDS[k].color+((k==='r'||k==='i')?';background:transparent':';background:currentColor')+'"></i>'+KINDS[k].name;
+  b.onclick=function(){on[k]=!on[k];b.setAttribute('aria-pressed',on[k]);sel=-1;draw()};sg.appendChild(b)});
+var cb=document.getElementById('wc-clip');
+cb.onclick=function(){clip=!clip;cb.setAttribute('aria-pressed',clip);draw()};
+
+function niceStep(span,n){var raw=span/n,m=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/m;return (f<1.5?1:f<3?2:f<7?5:10)*m}
+function fmtDate(t,o){return new Date(t).toLocaleDateString('en-US',Object.assign({timeZone:'UTC'},o))}
+
+var geo={};
+function visible(){return pts.filter(function(p){return on[p.k]&&p.t>=view.a&&p.t<=view.b})}
+
+function draw(){
+  if(!plot.clientWidth){return}var W=Math.max(300,plot.clientWidth-16),H=W<560?320:420;
+  var m={l:46,r:W<560?14:24,t:16,b:34};
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.innerHTML='';
+  var vis=visible();
+  var cap=clip?260:Infinity;
+  var ws=vis.map(function(p){return Math.min(p.w,cap)});
+  var lo=ws.length?Math.min.apply(null,ws):150, hi=ws.length?Math.max.apply(null,ws):250;
+  var pad=Math.max(6,(hi-lo)*.1); lo=Math.floor((lo-pad)/5)*5; hi=Math.ceil((hi+pad)/5)*5;
+  if(clip&&hi>270)hi=270;
+  var ys=niceStep(hi-lo,6);
+  var xs=function(t){return m.l+(t-view.a)/(view.b-view.a)*(W-m.l-m.r)};
+  var yp=function(w){return H-m.b-(w-lo)/(hi-lo)*(H-m.t-m.b)};
+  geo={xs:xs,yp:yp,W:W,H:H,m:m};
+  // y grid
+  for(var v=Math.ceil(lo/ys)*ys;v<=hi+1e-6;v+=ys){
+    el('line',{x1:m.l,x2:W-m.r,y1:yp(v),y2:yp(v),class:'w-grid'},svg);
+    var t=el('text',{x:m.l-8,y:yp(v)+4,'text-anchor':'end'},svg);t.textContent=Math.round(v*10)/10;
+  }
+  // x ticks: choose granularity by span
+  var spanDays=(view.b-view.a)/DAY, ticks=[], labelFn;
+  var a=new Date(view.a);
+  if(spanDays>900){var y0=a.getUTCFullYear();for(var y=y0;y<=new Date(view.b).getUTCFullYear();y++){ticks.push(Date.UTC(y,0,1))}labelFn=function(t){return new Date(t).getUTCFullYear()}}
+  else if(spanDays>200){var d=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),1));while(d.getTime()<=view.b){ticks.push(d.getTime());d.setUTCMonth(d.getUTCMonth()+(spanDays>500?6:3))}labelFn=function(t){return fmtDate(t,{month:'short',year:'2-digit'})}}
+  else if(spanDays>60){var d2=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),1));while(d2.getTime()<=view.b){ticks.push(d2.getTime());d2.setUTCMonth(d2.getUTCMonth()+1)}labelFn=function(t){return fmtDate(t,{month:'short',year:'2-digit'})}}
+  else{var st=Math.max(1,Math.round(niceStep(spanDays,7)));var s0=Math.ceil(view.a/DAY/st)*st*DAY;for(var q=s0;q<=view.b;q+=st*DAY)ticks.push(q);labelFn=function(t){return fmtDate(t,{month:'short',day:'numeric'})}}
+  ticks.forEach(function(t){
+    if(t<view.a||t>view.b)return;
+    el('line',{x1:xs(t),x2:xs(t),y1:m.t,y2:H-m.b,class:'w-grid'},svg);
+    var tx=el('text',{x:xs(t),y:H-m.b+18,'text-anchor':'middle'},svg);tx.textContent=labelFn(t);
+  });
+  el('line',{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:'w-axis'},svg);
+  var yl=el('text',{x:m.l,y:10,'text-anchor':'start'},svg);yl.textContent='lb';
+  // today marker
+  var now=D("2026-10-20");
+  if(now>=view.a&&now<=view.b){
+    el('line',{x1:xs(now),x2:xs(now),y1:m.t,y2:H-m.b,stroke:'var(--muted)','stroke-dasharray':'2 4'},svg);
+    var tt=el('text',{x:xs(now)-4,y:m.t+10,'text-anchor':'end'},svg);tt.textContent='today';
+  }
+  // lines: measured series (non-reported) solid thin, reported dashed
+  var meas=vis.filter(function(p){return p.k!=='r'&&p.k!=='i'}), rep=vis.filter(function(p){return p.k==='r'});
+  var P=function(p){return xs(p.t).toFixed(1)+','+yp(Math.min(p.w,cap)).toFixed(1)};
+  var imp=vis.filter(function(p){return p.k==='i'}),run=[];
+  var flush=function(){if(run.length>1)el('polyline',{points:run.map(P).join(' '),fill:'none',stroke:'var(--muted)','stroke-width':1.2,'stroke-opacity':.55,'stroke-linejoin':'round'},svg);run=[]};
+  meas.forEach(function(p,i){
+    if(i>0){var q=meas[i-1];if(imp.some(function(m){return m.t>q.t&&m.t<p.t}))flush()}
+    run.push(p)});
+  flush();
+  if(rep.length){
+    var lastM=pts.filter(function(p){return p.k!=='r'&&p.k!=='i'&&p.t<rep[0].t&&on[p.k]}).pop();
+    var seq=(lastM&&lastM.t>=view.a?[lastM]:[]).concat(rep);
+    if(seq.length>1)el('polyline',{points:seq.map(P).join(' '),fill:'none',stroke:'var(--amber)','stroke-width':1.4,'stroke-dasharray':'5 4'},svg);
+  }
+  // imputed points: dashed link from the previous and to the next measured value
+  vis.filter(function(p){return p.k==='i'}).forEach(function(p){
+    var prev=pts.filter(function(q){return q.t<p.t&&q.k!=='r'&&q.k!=='i'&&on[q.k]}).pop();
+    var next=pts.filter(function(q){return q.t>p.t&&q.k!=='r'&&q.k!=='i'&&on[q.k]})[0];
+    var seq=[prev,p,next].filter(Boolean);
+    el('polyline',{points:seq.map(P).join(' '),fill:'none',stroke:'var(--green)','stroke-width':1.4,'stroke-dasharray':'4 3'},svg);
+  });
+  // points
+  vis.forEach(function(p){
+    var capped=p.w>cap, cx=xs(p.t), cy=yp(Math.min(p.w,cap)), c=KINDS[p.k].color;
+    p._x=cx;p._y=cy;
+    if(capped){el('path',{d:'M'+cx+','+(cy-1)+' l-5,8 h10 z',fill:c},svg)}
+    else if(p.k==='r'||p.k==='i')el('circle',{cx:cx,cy:cy,r:5.5,fill:'var(--card)',stroke:c,'stroke-width':2.2},svg);
+    else el('circle',{cx:cx,cy:cy,r:4.2,fill:c,stroke:'var(--card)','stroke-width':1.2},svg);
+  });
+  vis._list=vis;
+  geo.vis=vis;
+  // selection ring
+  if(sel>=0&&vis[sel])showTip(vis[sel],true);else tip.hidden=true;
+  // brush layer
+  geo.brush=el('rect',{x:0,y:m.t,width:0,height:H-m.t-m.b,fill:'var(--blue)','fill-opacity':.15,stroke:'var(--blue)'},svg);
+  geo.brush.style.display='none';
+  // buttons state
+  Array.prototype.forEach.call(rg.querySelectorAll('button'),function(b,i){
+    var r=ranges[i];b.setAttribute('aria-pressed',!!r&&r[1]===view.a&&r[2]===view.b)});
+  renderRows(vis);
+}
+
+function showTip(p,ring){
+  var w=plot.clientWidth, sx=svg.getBoundingClientRect(), sc=sx.width/geo.W;
+  tip.hidden=false;
+  var wtxt=p.w+' lb';
+  tip.innerHTML='<b>'+wtxt+'</b><span class="w-tag">'+fmtDate(p.t,{weekday:p.k==='r'?undefined:'short',month:'short',day:p.k==='r'?undefined:'numeric',year:'numeric'})+(p.tm?' · '+p.tm:' · approx.')+'</span><span class="w-tag">'+KINDS[p.k].tag+'</span>';
+  var left=p._x*sc+8+(sx.left-plot.getBoundingClientRect().left), top=p._y*sc+(sx.top-plot.getBoundingClientRect().top)-12;
+  var tw=tip.offsetWidth;
+  if(left+tw>w-4)left=left-tw-16;
+  tip.style.left=Math.max(4,left)+'px';tip.style.top=Math.max(4,top-tip.offsetHeight/2)+'px';
+  if(ring){var old=svg.querySelector('.w-ring');if(old)old.remove();
+    el('circle',{cx:p._x,cy:p._y,r:9,fill:'none',stroke:'var(--ink)','stroke-width':1.5,class:'w-ring'},svg)}
+}
+
+// hover: nearest point by pixel distance
+function svgPoint(e){var r=svg.getBoundingClientRect();return {x:(e.clientX-r.left)*geo.W/r.width,y:(e.clientY-r.top)*geo.H/r.height}}
+function nearest(pt){var best=-1,bd=1e9;(geo.vis||[]).forEach(function(p,i){var dx=p._x-pt.x,dy=p._y-pt.y,d=dx*dx+dy*dy*.25;if(d<bd){bd=d;best=i}});return bd<48*48?best:-1}
+var drag=null;
+svg.addEventListener('pointerdown',function(e){var p=svgPoint(e);if(p.x<geo.m.l||p.x>geo.W-geo.m.r)return;drag={x0:p.x,x:p.x,moved:false};svg.setPointerCapture(e.pointerId)});
+svg.addEventListener('pointermove',function(e){
+  var p=svgPoint(e);
+  if(drag){drag.x=p.x;if(Math.abs(drag.x-drag.x0)>6)drag.moved=true;
+    if(drag.moved){var x=Math.min(drag.x,drag.x0),w=Math.abs(drag.x-drag.x0);geo.brush.style.display='';geo.brush.setAttribute('x',x);geo.brush.setAttribute('width',w);tip.hidden=true}return}
+  var i=nearest(p);sel=i;var old=svg.querySelector('.w-ring');if(old)old.remove();
+  if(i>=0)showTip(geo.vis[i],true);else tip.hidden=true;
+});
+svg.addEventListener('pointerup',function(e){
+  if(!drag)return;var d=drag;drag=null;
+  if(d.moved){var xa=Math.min(d.x,d.x0),xb=Math.max(d.x,d.x0),m=geo.m;
+    var inv=function(x){return view.a+(x-m.l)/(geo.W-m.l-m.r)*(view.b-view.a)};
+    var a=inv(xa),b=inv(xb);if(b-a>DAY){view={a:a,b:b};sel=-1;draw()}else geo.brush.style.display='none'}
+});
+svg.addEventListener('pointerleave',function(){if(!drag){sel=-1;tip.hidden=true;var old=svg.querySelector('.w-ring');if(old)old.remove()}});
+svg.addEventListener('keydown',function(e){
+  var n=(geo.vis||[]).length;if(!n)return;
+  if(e.key==='ArrowRight'){sel=Math.min(n-1,sel+1)}else if(e.key==='ArrowLeft'){sel=sel<0?n-1:Math.max(0,sel-1)}else if(e.key==='Escape'){sel=-1}else return;
+  e.preventDefault();var old=svg.querySelector('.w-ring');if(old)old.remove();
+  if(sel>=0)showTip(geo.vis[sel],true);else tip.hidden=true;
+});
+
+function renderRows(vis){
+  var tb=document.getElementById('wc-rows');
+  tb.innerHTML=vis.slice().reverse().map(function(p){
+    return '<tr><td>'+fmtDate(p.t,{year:'numeric',month:'short',day:'numeric'})+(p.k==='r'?' <span class="w-l">(approx.)</span>':'')+'</td><td class="w-n w-l">'+(p.tm||'–')+'</td><td class="w-n">'+p.w+(p.o?' <span class="w-l">(logged '+p.o+', Mar 2020)</span>':'')+'</td><td class="w-l"><span style="color:'+KINDS[p.k].color+'">●</span> '+KINDS[p.k].name+'</td></tr>';
+  }).join('');
+  var all=pts.filter(function(p){return p.k!=='r'&&p.k!=='i'}),
+      first=all[0],last=all[all.length-1],mn=all.filter(function(p){return p.k!=='u'}).reduce(function(a,b){return b.w<a.w?b:a}),mx=all.filter(function(p){return p.k!=='u'}).reduce(function(a,b){return b.w>a.w?b:a});
+  document.getElementById('wc-stats').innerHTML=
+    '<span><b>'+pts.length+'</b> readings</span><span><b>'+fmtDate(first.t,{month:'short',year:'numeric'})+' – Oct 2026</b></span>'+
+    '<span>low <b>'+mn.w+' lb</b> ('+fmtDate(mn.t,{month:'short',year:'numeric'})+')</span>'+
+    '<span>high <b>'+mx.w+' lb</b> ('+fmtDate(mx.t,{month:'short',year:'numeric'})+', excl. unverified)</span>'+
+    '<span>showing <b>'+vis.length+'</b></span>';
+}
+
+var rt,lw=0;function again(){var w=plot.clientWidth;if(w&&w!==lw){lw=w;draw()}}
+if(window.ResizeObserver)new ResizeObserver(function(){clearTimeout(rt);rt=setTimeout(again,60)}).observe(plot);window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(again,80)});
+draw();
+})();
+</script>
+<p class="note"><strong>Hypothesis.</strong> The fluctuation in this curve is driven by cyclical stress. Where that stress comes from, we have no idea. The claim is only that the swings are periodic and stress-linked, not that the cause is known.</p>
+<p class="note"><strong>It is falsifiable.</strong> It fails if the swings show no recurring pattern, or if a stress measure recorded alongside the weights (for example morning cortisol, sleep or logged stressful periods) does not track them. The pages that follow are one way of looking for the mechanism.</p>
+</section>
 
   <div class="group">Gemini session</div>
   <section id="g1" class="sec">
