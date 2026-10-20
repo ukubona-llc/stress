@@ -504,11 +504,13 @@
 
   <section id="preface" class="sec">
 <h2><span class="num">0</span>Preface: a weight curve that cycles</h2>
-<p class="note" style="margin-top:0">Below is the weight graph from the <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">Weight tab of the Hermeneutics page</a>, drawn from the same data. The original readings, the table behind them and the source notes live there: <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">https://ukubona-llc.github.io/hermeneutics/#weight</a></p>
+<p class="note" style="margin-top:0">Below is the weight graph from the <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">Weight tab of the Hermeneutics page</a>. The recorded readings (2016 on), the table behind them and the source notes live there: <a href="https://ukubona-llc.github.io/hermeneutics/#weight" target="_blank" rel="noopener">https://ukubona-llc.github.io/hermeneutics/#weight</a> The weights before 2016 are not in that data. They are recalled from memory and kept in the ledger under the graph, to be revised later from photographs.</p>
 <style>
-#wchart{--ink:var(--fg);--card:var(--surface);--rule:var(--line);--soft:var(--wash);--blue:var(--accent);--serif:var(--font-sans);--mono:var(--font-mono);--amber:#a85f00;--violet:#5a45d6;--green:#13765a}
-:root[data-theme="dark"] #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa;--flag:#ff7a6b}}
+#wchart{--ink:var(--fg);--card:var(--surface);--rule:var(--line);--soft:var(--wash);--blue:var(--accent);--serif:var(--font-sans);--mono:var(--font-mono);--amber:#a85f00;--violet:#5a45d6;--green:#13765a;--recall:#b0307a}
+:root[data-theme="dark"] #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa;--recall:#ff8ac8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #wchart{--amber:#f0b04a;--violet:#a898ff;--green:#58d2aa;--flag:#ff7a6b;--recall:#ff8ac8}}
+#wchart tr.sup td{text-decoration:line-through;opacity:.55}
+#wchart summary{cursor:pointer;color:var(--muted);font-size:13px}
 #wchart{--flag:#c0392b;display:grid;gap:16px;margin:18px 0 26px;font-size:15px;line-height:1.5}
 :root[data-theme="dark"] #wchart{--flag:#ff7a6b}
 #wchart h3.wh{font-family:var(--serif);font-weight:400;font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0;text-wrap:balance}#wchart .w-sub{color:var(--muted);margin:6px 0 0;max-width:65ch}#wchart .w-stats{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:13px;color:var(--muted)}#wchart .w-stats b{color:var(--ink);font-weight:500}#wchart .w-controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}#wchart .w-group{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-width:0}#wchart .w-group>span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}#wchart button,#wchart .w-chip{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:5px 10px;cursor:pointer}#wchart button:hover{border-color:var(--muted)}#wchart button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}#wchart button:focus-visible,#wchart svg:focus-visible{outline:2px solid var(--blue);outline-offset:2px}#wchart .w-chip{display:inline-flex;gap:7px;align-items:center}#wchart .w-chip i{width:11px;height:11px;border-radius:50%;display:inline-block;border:2px solid currentColor}#wchart .w-chip[aria-pressed="false"]{opacity:.45;background:transparent;color:var(--ink)}#wchart .w-chip[aria-pressed="true"]{background:var(--card);color:var(--ink);border-color:var(--ink)}#wchart .w-plot{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:10px 8px 6px;position:relative}#wchart svg{display:block;width:100%;height:auto;touch-action:pan-y;user-select:none}#wchart svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}#wchart .w-grid{stroke:var(--soft);stroke-width:1}#wchart .w-axis{stroke:var(--rule);stroke-width:1}#wchart .w-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:6px;padding:8px 10px;font-size:12.5px;line-height:1.4;max-width:240px;z-index:5;box-shadow:0 4px 14px rgba(0,0,0,.25)}#wchart .w-tip b{font-family:var(--mono);font-size:16px;font-weight:500}#wchart .w-tip .w-tag{display:block;opacity:.8;font-size:11.5px;margin-top:2px}#wchart .w-hint{font-size:12.5px;color:var(--muted)}#wchart .w-tw{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--card);max-height:420px;overflow-y:auto}#wchart table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.5px}#wchart th,#wchart td{padding:7px 12px;text-align:left;border-bottom:1px solid var(--soft)}#wchart th{position:sticky;top:0;background:var(--card);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}#wchart td.w-n{font-family:var(--mono);font-variant-numeric:tabular-nums}#wchart td.w-l{color:var(--muted)}#wchart tr.on td{background:var(--soft)}#wchart .w-notes{font-size:13px;color:var(--muted);display:grid;gap:4px}
@@ -519,7 +521,7 @@
 <div id="wchart">
   <header class="w-head">
     <h3 class="wh">Weight over time</h3>
-    <p class="w-sub">Every reading from the Weight tab of the Hermeneutics page, 2016 to now, on a true calendar axis. Equal distances on the horizontal axis are equal spans of time, whatever the sampling.</p>
+    <p class="w-sub">Every recorded reading from the Weight tab of the Hermeneutics page, 2016 to now, plus weights recalled back to 1999, on a true calendar axis. Equal distances on the horizontal axis are equal spans of time, whatever the sampling.</p>
   </header>
   <div class="w-stats" id="wc-stats"></div>
 
@@ -533,9 +535,12 @@
     <svg id="wc-svg" role="img" tabindex="0" aria-label="Weight in pounds against date. Use left and right arrow keys to step through readings."></svg>
     <div class="w-tip" id="wc-tip" hidden></div>
   </div>
-  <div class="w-hint">Drag across the chart to zoom into a span of dates. Arrow keys step through readings. Hollow rings mark points reported in the note on that page, not found in the export.</div>
+  <div class="w-hint">Drag across the chart to zoom into a span of dates. Arrow keys step through readings. Hollow rings mark points reported in the note on that page, not found in the export. Hollow diamonds are recalled values from the ledger below.</div>
 
   <details><summary style="cursor:pointer;color:var(--muted);font-size:13px">Show every reading as a table</summary><div class="w-tw"><table><thead><tr><th>Date</th><th>Time</th><th>Weight (lb)</th><th>Source</th></tr></thead><tbody id="wc-rows"></tbody></table></div></details>
+  <details open><summary>Recalled-weight ledger (append-only)</summary>
+  <p class="w-hint">Rows are never edited or deleted. A revision is a new row that names the row it supersedes: the old row stays, struck through, and the chart plots the newest. Each row keeps its own basis, so attribution stays with the entry.</p>
+  <div class="w-tw"><table><thead><tr><th>#</th><th>As of</th><th>Weight (lb)</th><th>Basis</th><th>Entered</th><th>Supersedes</th></tr></thead><tbody id="wc-ledger"></tbody></table></div></details>
   <div class="w-notes">
     <div>Source icons are as listed on the Hermeneutics page: ❤️ is the health export, 📱 is the iPhone. Unverified points are plotted and labeled. The two 220.5 lb readings logged in March 2020 are imputed to 190 lb and placed in Dec 2019 (green rings, dashed links to the neighboring readings); the original values are kept in the tooltip text and table. The 485 lb entry on 2020-03-15 is left out as an obvious typo.</div>
     <div>2025–26 points come from the typed note on the Hermeneutics page ("began 2025 at 236 · 170 by June · 190 by October · now in 2026 October about 235"). Their days are placed mid-month for plotting.</div>
@@ -544,7 +549,7 @@
 <script>
 (function(){
 var D=function(s){return new Date(s+'T00:00:00Z').getTime()};
-// date, time, lbs, kind: h=health export, p=iPhone, u=unverified, r=reported
+// date, time, lbs, kind: h=health export, p=iPhone, u=unverified, r=reported, i=imputed. m=recalled comes from LEDGER below
 var raw=[
 ["2016-11-05","01:20",216,"h"],["2017-10-05","02:57",178,"h"],["2017-11-17","08:02",165,"h"],["2017-11-19","01:30",175,"h"],
 ["2018-02-22","00:51",177,"h"],["2018-04-18","15:15",170,"h"],["2018-10-12","15:14",190,"h"],["2018-12-01","17:11",175,"h"],
@@ -562,22 +567,45 @@ var pts=raw.map(function(r){
   var t=D(r[0])+(r[1]?(+r[1].slice(0,2)*60+ +r[1].slice(3))*60000:12*3600000);
   return {t:t,d:r[0],tm:r[1],w:r[2],k:r[3],o:r[4]};
 }).sort(function(a,b){return a.t-b.t});
+// RECALLED-WEIGHT LEDGER. APPEND-ONLY: never edit or delete a row. To revise one, add a new row
+// with sup set to the id it replaces. d = placement date, pr = precision ('m' month, 'y' year).
+var LEDGER=[
+{id:"L1",d:"1999-04-15",pr:"m",w:170,basis:"Memory. Also his weight for many years before April 1999.",entered:"2026-10-20"},
+{id:"L2",d:"1999-10-20",pr:"m",w:187.4,basis:"Memory. Just back from 8 months in Atlanta (S6 vacation), beginning medical school at Makerere. Placed on 20 Oct, the 27-year anniversary; the month is what was stated.",entered:"2026-10-20"},
+{id:"L3",d:"2000-10-15",pr:"m",w:170,basis:"Memory. Known to be 170 by Oct 2000, and about 170 for many years after, through July 2006. No intermediate points entered.",entered:"2026-10-20"},
+{id:"L4",d:"2006-07-15",pr:"m",w:170,basis:"Memory. Definitely 170 until July 2006.",entered:"2026-10-20"},
+{id:"L5",d:"2007-07-01",pr:"y",w:180,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L6",d:"2008-07-01",pr:"y",w:185,basis:"Rough recall. Entered as 2009; read as 2008 because 2009 is entered again next. Supersede this row if that reading is wrong.",entered:"2026-10-20"},
+{id:"L7",d:"2009-07-01",pr:"y",w:168,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L8",d:"2010-07-01",pr:"y",w:170,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L9",d:"2011-07-01",pr:"y",w:177,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L10",d:"2012-07-01",pr:"y",w:182,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L11",d:"2013-07-01",pr:"y",w:185,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L12",d:"2014-07-01",pr:"y",w:190,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"},
+{id:"L13",d:"2015-07-01",pr:"y",w:192,basis:"Rough recall, to be checked against the photo album.",entered:"2026-10-20"}
+];
+var supd={};LEDGER.forEach(function(e){if(e.sup)supd[e.sup]=e.id});
+LEDGER.forEach(function(e){if(!supd[e.id])pts.push({t:D(e.d)+12*3600000,d:e.d,tm:"",w:e.w,k:"m",pr:e.pr,id:e.id})});
+pts.sort(function(a,b){return a.t-b.t});
+function isMeas(p){return p.k==="h"||p.k==="p"||p.k==="u"}
+function pdate(p){return p.pr==="y"?{year:"numeric"}:p.pr==="m"?{month:"short",year:"numeric"}:null}
 var KINDS={
   h:{name:"Health export",color:"var(--blue)",tag:"Health export (❤️)"},
   p:{name:"iPhone",color:"var(--violet)",tag:"iPhone (📱)"},
   u:{name:"Unverified",color:"var(--flag)",tag:"Unverified reading, plotted as recorded"},
   i:{name:"Imputed",color:"var(--green)",tag:"Imputed: logged as 220.5 lb in March 2020, set to 190 lb and moved to Dec 2019"},
-  r:{name:"Reported",color:"var(--amber)",tag:"Reported in the tab's note, not in the export"}
+  r:{name:"Reported",color:"var(--amber)",tag:"Reported in the tab's note, not in the export"},
+  m:{name:"Recalled",color:"var(--recall)",tag:"Recalled from memory, not measured. See the ledger"}
 };
-var on={h:true,p:true,u:true,i:true,r:true};
-var X0=D("2016-09-01"),X1=D("2026-12-01");
+var on={h:true,p:true,u:true,i:true,r:true,m:true};
+var X0=D("1999-01-01"),X1=D("2026-12-01");
 var view={a:X0,b:X1}, clip=false, sel=-1;
 var DAY=86400000;
 var svg=document.getElementById('wc-svg'),tip=document.getElementById('wc-tip'),plot=document.getElementById('wc-plot');
 var NS='http://www.w3.org/2000/svg';
 function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
 
-var ranges=[["All",X0,X1],["2020 Mar",D("2020-02-26"),D("2020-04-02")],["2021–22",D("2021-01-01"),D("2022-12-31")],["2023–26",D("2022-12-01"),X1]];
+var ranges=[["All",X0,X1],["1999–2015 recalled",D("1999-01-01"),D("2016-06-01")],["2020 Mar",D("2020-02-26"),D("2020-04-02")],["2021–22",D("2021-01-01"),D("2022-12-31")],["2023–26",D("2022-12-01"),X1]];
 var rg=document.getElementById('wc-ranges');
 ranges.forEach(function(r,i){var b=document.createElement('button');b.textContent=r[0];b.dataset.i=i;
   b.onclick=function(){view={a:r[1],b:r[2]};sel=-1;draw()};rg.appendChild(b)});
@@ -585,7 +613,7 @@ var zb=document.createElement('button');zb.textContent="Reset";zb.onclick=functi
 
 var sg=document.getElementById('wc-srcs');
 Object.keys(KINDS).forEach(function(k){var b=document.createElement('button');b.className='w-chip';b.setAttribute('aria-pressed','true');
-  b.innerHTML='<i style="color:'+KINDS[k].color+((k==='r'||k==='i')?';background:transparent':';background:currentColor')+'"></i>'+KINDS[k].name;
+  b.innerHTML='<i style="color:'+KINDS[k].color+((k==='r'||k==='i'||k==='m')?';background:transparent':';background:currentColor')+'"></i>'+KINDS[k].name;
   b.onclick=function(){on[k]=!on[k];b.setAttribute('aria-pressed',on[k]);sel=-1;draw()};sg.appendChild(b)});
 var cb=document.getElementById('wc-clip');
 cb.onclick=function(){clip=!clip;cb.setAttribute('aria-pressed',clip);draw()};
@@ -619,7 +647,7 @@ function draw(){
   // x ticks: choose granularity by span
   var spanDays=(view.b-view.a)/DAY, ticks=[], labelFn;
   var a=new Date(view.a);
-  if(spanDays>900){var y0=a.getUTCFullYear();for(var y=y0;y<=new Date(view.b).getUTCFullYear();y++){ticks.push(Date.UTC(y,0,1))}labelFn=function(t){return new Date(t).getUTCFullYear()}}
+  if(spanDays>900){var y0=a.getUTCFullYear();var ys2=spanDays>6000?3:spanDays>2800?2:1;for(var y=y0;y<=new Date(view.b).getUTCFullYear();y+=ys2){ticks.push(Date.UTC(y,0,1))}labelFn=function(t){return new Date(t).getUTCFullYear()}}
   else if(spanDays>200){var d=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),1));while(d.getTime()<=view.b){ticks.push(d.getTime());d.setUTCMonth(d.getUTCMonth()+(spanDays>500?6:3))}labelFn=function(t){return fmtDate(t,{month:'short',year:'2-digit'})}}
   else if(spanDays>60){var d2=new Date(Date.UTC(a.getUTCFullYear(),a.getUTCMonth(),1));while(d2.getTime()<=view.b){ticks.push(d2.getTime());d2.setUTCMonth(d2.getUTCMonth()+1)}labelFn=function(t){return fmtDate(t,{month:'short',year:'2-digit'})}}
   else{var st=Math.max(1,Math.round(niceStep(spanDays,7)));var s0=Math.ceil(view.a/DAY/st)*st*DAY;for(var q=s0;q<=view.b;q+=st*DAY)ticks.push(q);labelFn=function(t){return fmtDate(t,{month:'short',day:'numeric'})}}
@@ -637,7 +665,7 @@ function draw(){
     var tt=el('text',{x:xs(now)-4,y:m.t+10,'text-anchor':'end'},svg);tt.textContent='today';
   }
   // lines: measured series (non-reported) solid thin, reported dashed
-  var meas=vis.filter(function(p){return p.k!=='r'&&p.k!=='i'}), rep=vis.filter(function(p){return p.k==='r'});
+  var meas=vis.filter(function(p){return isMeas(p)}), rep=vis.filter(function(p){return p.k==='r'});
   var P=function(p){return xs(p.t).toFixed(1)+','+yp(Math.min(p.w,cap)).toFixed(1)};
   var imp=vis.filter(function(p){return p.k==='i'}),run=[];
   var flush=function(){if(run.length>1)el('polyline',{points:run.map(P).join(' '),fill:'none',stroke:'var(--muted)','stroke-width':1.2,'stroke-opacity':.55,'stroke-linejoin':'round'},svg);run=[]};
@@ -646,14 +674,21 @@ function draw(){
     run.push(p)});
   flush();
   if(rep.length){
-    var lastM=pts.filter(function(p){return p.k!=='r'&&p.k!=='i'&&p.t<rep[0].t&&on[p.k]}).pop();
+    var lastM=pts.filter(function(p){return isMeas(p)&&p.t<rep[0].t&&on[p.k]}).pop();
     var seq=(lastM&&lastM.t>=view.a?[lastM]:[]).concat(rep);
     if(seq.length>1)el('polyline',{points:seq.map(P).join(' '),fill:'none',stroke:'var(--amber)','stroke-width':1.4,'stroke-dasharray':'5 4'},svg);
   }
+  // recalled series: dotted, linked forward to the first recorded reading
+  var rc=vis.filter(function(p){return p.k==='m'});
+  if(rc.length){
+    var nx=pts.filter(function(p){return isMeas(p)&&p.t>rc[rc.length-1].t&&on[p.k]})[0];
+    var sq=rc.concat(nx&&nx.t<=view.b?[nx]:[]);
+    if(sq.length>1)el('polyline',{points:sq.map(P).join(' '),fill:'none',stroke:'var(--recall)','stroke-width':1.4,'stroke-dasharray':'2 4','stroke-linecap':'round'},svg);
+  }
   // imputed points: dashed link from the previous and to the next measured value
   vis.filter(function(p){return p.k==='i'}).forEach(function(p){
-    var prev=pts.filter(function(q){return q.t<p.t&&q.k!=='r'&&q.k!=='i'&&on[q.k]}).pop();
-    var next=pts.filter(function(q){return q.t>p.t&&q.k!=='r'&&q.k!=='i'&&on[q.k]})[0];
+    var prev=pts.filter(function(q){return q.t<p.t&&isMeas(q)&&on[q.k]}).pop();
+    var next=pts.filter(function(q){return q.t>p.t&&isMeas(q)&&on[q.k]})[0];
     var seq=[prev,p,next].filter(Boolean);
     el('polyline',{points:seq.map(P).join(' '),fill:'none',stroke:'var(--green)','stroke-width':1.4,'stroke-dasharray':'4 3'},svg);
   });
@@ -662,6 +697,7 @@ function draw(){
     var capped=p.w>cap, cx=xs(p.t), cy=yp(Math.min(p.w,cap)), c=KINDS[p.k].color;
     p._x=cx;p._y=cy;
     if(capped){el('path',{d:'M'+cx+','+(cy-1)+' l-5,8 h10 z',fill:c},svg)}
+    else if(p.k==='m')el('path',{d:'M'+cx+','+(cy-6.5)+' l6.5,6.5 l-6.5,6.5 l-6.5,-6.5 z',fill:'var(--card)',stroke:c,'stroke-width':2},svg);
     else if(p.k==='r'||p.k==='i')el('circle',{cx:cx,cy:cy,r:5.5,fill:'var(--card)',stroke:c,'stroke-width':2.2},svg);
     else el('circle',{cx:cx,cy:cy,r:4.2,fill:c,stroke:'var(--card)','stroke-width':1.2},svg);
   });
@@ -682,7 +718,7 @@ function showTip(p,ring){
   var w=plot.clientWidth, sx=svg.getBoundingClientRect(), sc=sx.width/geo.W;
   tip.hidden=false;
   var wtxt=p.w+' lb';
-  tip.innerHTML='<b>'+wtxt+'</b><span class="w-tag">'+fmtDate(p.t,{weekday:p.k==='r'?undefined:'short',month:'short',day:p.k==='r'?undefined:'numeric',year:'numeric'})+(p.tm?' · '+p.tm:' · approx.')+'</span><span class="w-tag">'+KINDS[p.k].tag+'</span>';
+  tip.innerHTML='<b>'+wtxt+'</b><span class="w-tag">'+fmtDate(p.t,pdate(p)||{weekday:p.k==='r'?undefined:'short',month:'short',day:p.k==='r'?undefined:'numeric',year:'numeric'})+(p.tm?' · '+p.tm:' · approx.')+'</span><span class="w-tag">'+KINDS[p.k].tag+(p.id?' ('+p.id+')':'')+'</span>';
   var left=p._x*sc+8+(sx.left-plot.getBoundingClientRect().left), top=p._y*sc+(sx.top-plot.getBoundingClientRect().top)-12;
   var tw=tip.offsetWidth;
   if(left+tw>w-4)left=left-tw-16;
@@ -720,23 +756,32 @@ svg.addEventListener('keydown',function(e){
 function renderRows(vis){
   var tb=document.getElementById('wc-rows');
   tb.innerHTML=vis.slice().reverse().map(function(p){
-    return '<tr><td>'+fmtDate(p.t,{year:'numeric',month:'short',day:'numeric'})+(p.k==='r'?' <span class="w-l">(approx.)</span>':'')+'</td><td class="w-n w-l">'+(p.tm||'–')+'</td><td class="w-n">'+p.w+(p.o?' <span class="w-l">(logged '+p.o+', Mar 2020)</span>':'')+'</td><td class="w-l"><span style="color:'+KINDS[p.k].color+'">●</span> '+KINDS[p.k].name+'</td></tr>';
+    return '<tr><td>'+fmtDate(p.t,pdate(p)||{year:'numeric',month:'short',day:'numeric'})+(p.k==='r'||p.pr?' <span class="w-l">(approx.)</span>':'')+'</td><td class="w-n w-l">'+(p.tm||'–')+'</td><td class="w-n">'+p.w+(p.o?' <span class="w-l">(logged '+p.o+', Mar 2020)</span>':'')+'</td><td class="w-l"><span style="color:'+KINDS[p.k].color+'">●</span> '+KINDS[p.k].name+'</td></tr>';
   }).join('');
-  var all=pts.filter(function(p){return p.k!=='r'&&p.k!=='i'}),
+  var all=pts.filter(function(p){return isMeas(p)}),
       first=all[0],last=all[all.length-1],mn=all.filter(function(p){return p.k!=='u'}).reduce(function(a,b){return b.w<a.w?b:a}),mx=all.filter(function(p){return p.k!=='u'}).reduce(function(a,b){return b.w>a.w?b:a});
+  var nrec=pts.filter(function(p){return p.k==='m'}).length;
   document.getElementById('wc-stats').innerHTML=
-    '<span><b>'+pts.length+'</b> readings</span><span><b>'+fmtDate(first.t,{month:'short',year:'numeric'})+' – Oct 2026</b></span>'+
+    '<span><b>'+(pts.length-nrec)+'</b> readings</span><span><b>'+nrec+'</b> recalled</span><span><b>'+fmtDate(pts[0].t,{month:'short',year:'numeric'})+' – Oct 2026</b></span>'+
     '<span>low <b>'+mn.w+' lb</b> ('+fmtDate(mn.t,{month:'short',year:'numeric'})+')</span>'+
-    '<span>high <b>'+mx.w+' lb</b> ('+fmtDate(mx.t,{month:'short',year:'numeric'})+', excl. unverified)</span>'+
+    '<span>high <b>'+mx.w+' lb</b> ('+fmtDate(mx.t,{month:'short',year:'numeric'})+', recorded, excl. unverified)</span>'+
     '<span>showing <b>'+vis.length+'</b></span>';
 }
 
 var rt,lw=0;function again(){var w=plot.clientWidth;if(w&&w!==lw){lw=w;draw()}}
 if(window.ResizeObserver)new ResizeObserver(function(){clearTimeout(rt);rt=setTimeout(again,60)}).observe(plot);window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(again,80)});
+(function(){
+  var tb=document.getElementById('wc-ledger');
+  tb.innerHTML=LEDGER.map(function(e){
+    var by=supd[e.id],o=pdate(e)||{year:'numeric',month:'short',day:'numeric'};
+    return '<tr'+(by?' class="sup"':'')+'><td class="w-n">'+e.id+'</td><td>'+fmtDate(D(e.d),o)+' <span class="w-l">(approx.)</span></td><td class="w-n">'+e.w+'</td><td class="w-l">'+e.basis+(by?' (superseded by '+by+')':'')+'</td><td class="w-n w-l">'+e.entered+'</td><td class="w-n w-l">'+(e.sup||'–')+'</td></tr>';
+  }).join('');
+})();
 draw();
 })();
 </script>
 <p class="note"><strong>Hypothesis.</strong> The fluctuation in this curve is driven by cyclical stress. Where that stress comes from, we have no idea. The claim is only that the swings are periodic and stress-linked, not that the cause is known.</p>
+<p class="note"><strong>What the recalled rows add.</strong> They are rough, but the shape is worth stating: about 170 lb in April 1999, an excursion to 187.4 by October 1999, back to 170 by October 2000, then roughly flat to July 2006, then a slow climb to about 192 by 2015. That is one excursion and one long plateau, not an obvious cycle, so the first test is whether any period can be fitted at all. Treat these rows as claims about the past, not measurements.</p>
 <p class="note"><strong>It is falsifiable.</strong> It fails if the swings show no recurring pattern, or if a stress measure recorded alongside the weights (for example morning cortisol, sleep or logged stressful periods) does not track them. The pages that follow are one way of looking for the mechanism.</p>
 </section>
 
